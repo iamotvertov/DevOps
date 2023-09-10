@@ -1,0 +1,19 @@
+#!/bin/bash
+read -p "Enter first number: " x
+read -p "Enter second number: " y
+read -p "Enter action symbol: " operation
+
+case $operation in 
+"+") echo "$x+$y="$(expr "$x" + "$y");;
+"*") echo "$x+$y="$(expr "$x" \* "$y");;
+"-") echo "$x-$y="$(expr "$x" - "$y");;
+"/") 
+if [ $y -ne 0 ]
+then 
+	echo "$x/$y="$(expr "$x" / "$y")
+else
+	echo "Divizion by zero!"
+fi;;
+"**") echo "$x**$y="$(expr $(("$x" ** "$y")));;
+*) echo "unknown operation!"
+esac

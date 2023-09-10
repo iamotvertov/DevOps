@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Check resolving website or not
+read -p "Enter website to resolve: " web_site_resolve
+host "$web_site_resolve" > /dev/null
+if [ $? -eq 0 ]
+then 
+	echo "Resolving is OK"
+else
+	echo "Something went wrong, resolving was not OK"
+fi
+
+#Check ping to website
+read -p "Enter website to ping: " web_site_ping
+ping -c10 -A "$web_site_ping" > /dev/null
+if [ $? -eq 0 ]
+then
+	echo "Ping to $web_site_ping is OK"
+else
+	echo "Something went wrong, ping was not OK"
+fi
+
+#Output result of pinging
+read -p "Enter website to display ping result info: " website
+ping -c10 -A -q "$website" | tail -3

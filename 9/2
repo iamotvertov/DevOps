@@ -1,0 +1,4 @@
+#!/bin/bash
+first=$(df -h | grep "/dev/nvme0n1p2" | awk '{print $2}' | sed 's/G//g')
+second=$(df -h | grep "/dev/nvme0n1p2" | awk '{print $4}' | sed 's/G//g')
+echo $second \* 100 / $first | bc

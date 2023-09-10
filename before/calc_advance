@@ -1,0 +1,38 @@
+#!/bin/bash
+read -p "Enter first number: " x
+read -p "Enter second number: " y
+read -p "Enter action symbol: " operation
+
+plus() {
+echo "$1"+"$2" | bc -l
+}
+
+minus() {
+echo "$1"-"$2" | bc -l
+}
+
+multip() {
+echo "$1"*"$2" | bc -l
+}
+
+division() {
+if [ $2 -ne 0 ]
+then
+        echo "$1"/"$2" | bc -l
+else
+        echo " Divizion by zero!"
+fi
+}
+
+exp() {
+echo "$1"^"$2" | bc -l
+}
+
+case $operation in 
+"+") echo "$x+$y="$(plus $x $y);;
+"-") echo "$x-$y="$(minus $x $y);; 
+"*") echo "$x*$y="$(multip $x $y);;
+"/") echo "$x/$y="$(division $x $y);;  
+"**") echo "$x**$y="$(exp $x $y);;  
+*) echo "unknown operation!"
+esac

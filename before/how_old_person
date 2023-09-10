@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Enter year of birth: " year
+current_year=`date +%Y`
+((age = $current_year - $year))
+echo "Your age is $age"

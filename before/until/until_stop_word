@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while read line
+do
+ if [ "$line" = "quite" ]
+  then
+   break
+ fi
+echo "$line"
+done < file_text
+

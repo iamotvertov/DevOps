@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+
+#в переменную line поочередно попадают строки из файла fil_list
+num=1
+while read line
+do
+echo "Line $num: $line"
+num=$(( $num + 1 ))
+done < file_list

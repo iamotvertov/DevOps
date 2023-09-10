@@ -1,0 +1,27 @@
+#!/bin/bash
+
+date=$(date "+%Y_%m_%d")
+source_dir="/home/pascha"
+destination_dir="/home/devops"
+backup_path="$distination"/backup-"$date.tar.gz"
+
+if [ ! -d $source_dir ]
+then
+	echo $source_dir does not exist of no a direction
+	exit 1
+fi
+
+if [ ! -d $destination_dir ]
+then
+        echo $destination_dir does not exist of no a direction
+        exit 1
+fi
+
+if tar -zcpf $backup_path $source_dir
+then
+	echo Archiving is successful
+	exit 0
+else
+	echo Something went wrong
+fi
+

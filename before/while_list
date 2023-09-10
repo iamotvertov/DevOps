@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+#в переменную line поочередно попадают строки из файла fil_list
+num=1
+read -p "Enter file name to count sentences: " file_name
+while read line
+do
+echo "Line $num: $line"
+num=$(( $num + 1 ))
+done < $file_name

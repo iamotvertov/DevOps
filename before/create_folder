@@ -1,0 +1,14 @@
+#!/bin/bash
+num=0
+directory=/tmp
+while true
+do
+date=$(date +-%Y%m%d_%H%M)
+	mkdir -v $directory$directory$date
+sleep 1m
+num=$(( $num + 1 ))
+if [ $num -eq 7 ]
+then
+break
+fi
+done

@@ -1,0 +1,13 @@
+#!/bin/bash
+num=0
+while [ $num -lt 10 ]
+do
+	if [ $num -eq 0 ] #Ноль тоже является честным числом 
+	then
+	echo $num $(fortune)
+	elif [ $(($num % 2)) -eq 0 ] #Если остаток от деления равен 0, число - четное
+	then
+	echo $num $(fortune)
+	fi
+	num=$(( $num + 1 ))
+done

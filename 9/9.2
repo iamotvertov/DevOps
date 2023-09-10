@@ -1,0 +1,5 @@
+ps -auxf | awk -F " " ''/'root'/' {print $2,$11,$13,$14,$15}'
+awk 'NR % 2 == 0 {print}' /etc/passwd
+awk 'NR % 3 != 0 {print}' /etc/passwd
+
+ps -aux | awk -F " " '{print toupper($0)}'

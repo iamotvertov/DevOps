@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in $(find /etc -maxdepth 1 -type f)
+do
+wc -l $i
+done
