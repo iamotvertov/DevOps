@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Tue, 10 Oct 2023 15:51:20 +0600
+Source: nginx-site-conf
+Binary: nginx-site-conf
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Pascha <otvertov@yandex.ru>
+Changed-By: Pascha <otvertov@yandex.ru>
+Description:
+ nginx-site-conf - <insert up to 60 chars description>
+Changes:
+ nginx-site-conf (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 5a74f32b3b746d158213c3c0d677cdb9af628b63 4072 nginx-site-conf_0.1-1_all.deb
+ c0fc0a10e0785f8069eacd96877fc80c9394945c 5980 nginx-site-conf_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 0969050787aba8b36e87c8d481ff98d2cf1bca9324160e4163b015dd9e773c1c 4072 nginx-site-conf_0.1-1_all.deb
+ de5b22a8ce6eb98078a48e22980bd9a92fc6029812e5617c23974b1de5b31141 5980 nginx-site-conf_0.1-1_amd64.buildinfo
+Files:
+ ac6165a36200c23e56accc73d5944e21 4072 unknown optional nginx-site-conf_0.1-1_all.deb
+ cb998937b6b236dc75882efa5acc7451 5980 unknown optional nginx-site-conf_0.1-1_amd64.buildinfo
